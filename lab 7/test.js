@@ -5,6 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+//1. Enter a number and on click of a button print its multiplication table.
 function multiplicationTable() {
   rl.question("Enter a number to print its multiplication table: ", (number) => {
     number = parseInt(number);
@@ -16,6 +17,7 @@ function multiplicationTable() {
   });
 }
 
+//2. Print the largest of three numbers entered by the user.
 function largestOfThree() {
   rl.question("Enter three numbers separated by spaces: ", (input) => {
     const numbers = input.split(' ').map(Number);
@@ -29,6 +31,7 @@ function largestOfThree() {
   });
 }
 
+//3. Find the factorial of a number entered by the user.
 function factorial() {
   rl.question("Enter a number to find its factorial: ", (number) => {
     number = parseInt(number);
@@ -45,6 +48,7 @@ function factorial() {
   });
 }
 
+//4. Enter a list of positive numbers using the prompt terminated by a zero. Find the sum and average of three numbers
 function sumAndAverage() {
   let numbers = [];
   function getNumber() {
@@ -71,6 +75,7 @@ function sumAndAverage() {
   getNumber();
 }
 
+//Main Function
 function mainMenu() {
   console.log("\nChoose an option:");
   console.log("1. Print multiplication table");
