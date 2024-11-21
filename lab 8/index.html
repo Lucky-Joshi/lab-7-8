@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <!-- Roll Number -->
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required>
+            <span id="rollNumberError" class="error"></span>
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error"></span>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <span id="dobError" class="error"></span>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            <span id="genderError" class="error"></span>
+
+            <!-- Courses (Checkbox) -->
+            <label>Courses:</label>
+            <div class="courses">
+                <input type="checkbox" id="course1" name="courses" value="Math">
+                <label for="course1">Math</label>
+                <input type="checkbox" id="course2" name="courses" value="Science">
+                <label for="course2">Science</label>
+                <input type="checkbox" id="course3" name="courses" value="History">
+                <label for="course3">History</label>
+            </div>
+            <span id="coursesError" class="error"></span>
+
+            <!-- Department (Dropdown) -->
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Mathematics">Mathematics</option>
+            </select>
+            <span id="departmentError" class="error"></span>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
